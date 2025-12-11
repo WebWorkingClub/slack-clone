@@ -1,8 +1,8 @@
-import { Inggest } from "inngest";
+import { Inngest } from "inngest";
 import { connectDB } from "./db";
 import { User } from "../models/user.model";
 
-export const inngest = new Inggest({ id: "slack-clone" });
+export const inngest = new Inngest({ id: "slack-clone" });
 
 const syncUser = inngest.createFunction(
   { id: "sync-user" },
