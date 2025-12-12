@@ -12,6 +12,10 @@ app.use(clerkMiddleware());
 
 app.use("/api/inngest", serve({ client: inngest, functions }));
 
+app.get("/", (req, res) => {
+  res.send("Welcome to the Slack Clone API");
+});
+
 const startServer = async () => {
   try {
     await connectDB();
